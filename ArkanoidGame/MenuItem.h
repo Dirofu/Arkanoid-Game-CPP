@@ -19,8 +19,6 @@ namespace ArkanoidGame
 		std::vector<MenuItem*> children;
 
 	public:
-		sf::FloatRect GetFloatRect() { return text.getLocalBounds(); }
-
 		Orientation GetChildrenOrientation() { return childrenOrientation; }
 		Alignment GetChildrenAlignment() { return childrenAlignment; }
 		float GetChildrenSpacing() { return childrenSpacing; }
@@ -38,8 +36,8 @@ namespace ArkanoidGame
 		void SetColor(bool isSelect, sf::Color color) { isSelect ? selectedColor = color : deselectedColor = color; }
 		void SetEnableStatus(bool status) { isEnabled = status; }
 
-		void InitializeMenuItemText(sf::String text, sf::Font font, int size);
-		void InitializeMenuItemTextHint(sf::String text, sf::Font font, int size, sf::Color color);
+		void InitializeMenuItemText(sf::String text, sf::Font& font, int size);
+		void InitializeMenuItemTextHint(sf::String text, sf::Font& font, int size, sf::Color color);
 		void UpdateText(sf::String text);
 		void SetTextColor(sf::Color color);
 		void AddNewItemInChildren(MenuItem& item);

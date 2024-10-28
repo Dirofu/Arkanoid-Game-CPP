@@ -20,11 +20,11 @@ namespace ArkanoidGame
 	{
 		recordsTable =
 		{
-			{"John", MAX_APPLES / 2},
-			{"Jane", MAX_APPLES / 3 },
-			{"Alice", MAX_APPLES / 4 },
-			{"Bob", MAX_APPLES / 5 },
-			{"Clementine", MAX_APPLES / 5 },
+			{"John", MAX_TILES * POINTS_PER_TILE / 2},
+			{"Jane", MAX_TILES * POINTS_PER_TILE / 3 },
+			{"Alice", MAX_TILES * POINTS_PER_TILE / 4 },
+			{"Bob", MAX_TILES * POINTS_PER_TILE / 5 },
+			{"Clementine", MAX_TILES * POINTS_PER_TILE / 5 },
 		};
 
 		gameStateChangeType = GameStateChangeType::None;
@@ -44,7 +44,7 @@ namespace ArkanoidGame
 			{
 				window.close();
 			}
-
+			
 			if (gameStateStack.size() > 0)
 			{
 				HandleWindowEventGameState(gameStateStack.back(), event);

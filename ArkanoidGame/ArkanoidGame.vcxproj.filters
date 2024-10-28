@@ -11,6 +11,12 @@
     <Filter Include="Sources\GameStates">
       <UniqueIdentifier>{8ac19b9e-8f3f-440d-8c10-af3afc739679}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sources\Platform">
+      <UniqueIdentifier>{ba1ffc17-77e9-44ad-9eb1-60ea74fe8343}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Ball">
+      <UniqueIdentifier>{82ee57a3-b2a3-4135-9311-20645b8af585}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameMain.cpp">
@@ -23,9 +29,6 @@
       <Filter>Sources</Filter>
     </ClCompile>
     <ClCompile Include="Text.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Snake.cpp">
       <Filter>Sources</Filter>
     </ClCompile>
     <ClCompile Include="Application.cpp">
@@ -55,6 +58,15 @@
     <ClCompile Include="GameStatePauseMenu.cpp">
       <Filter>Sources\GameStates</Filter>
     </ClCompile>
+    <ClCompile Include="Platform.cpp">
+      <Filter>Sources\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Ball.cpp">
+      <Filter>Sources\Ball</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -66,7 +78,6 @@
     <ClInclude Include="Vector.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Text.h" />
-    <ClInclude Include="Snake.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="Menu.h">
       <Filter>Sources\Menus</Filter>
@@ -88,6 +99,16 @@
     </ClInclude>
     <ClInclude Include="GameStatePauseMenu.h">
       <Filter>Sources\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="PlatformDirection.h" />
+    <ClInclude Include="Platform.h">
+      <Filter>Sources\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball.h">
+      <Filter>Sources\Ball</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Sources</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

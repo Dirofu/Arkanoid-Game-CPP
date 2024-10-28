@@ -2,14 +2,14 @@
 
 namespace ArkanoidGame
 {
-	void MenuItem::InitializeMenuItemText(sf::String string, sf::Font font, int size)
+	void MenuItem::InitializeMenuItemText(sf::String string, sf::Font& font, int size)
 	{
 		text.setString(string);
 		text.setFont(font);
 		text.setCharacterSize(size);
 	}
 
-	void MenuItem::InitializeMenuItemTextHint(sf::String string, sf::Font font, int size, sf::Color color)
+	void MenuItem::InitializeMenuItemTextHint(sf::String string, sf::Font& font, int size, sf::Color color)
 	{
 		hintText.setString(string);
 		hintText.setFont(font);

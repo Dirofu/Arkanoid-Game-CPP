@@ -11,18 +11,16 @@ namespace ArkanoidGame
 	const std::string GAME_NAME = "Arkanoid Game";
 
 	// Game settings constants
-	const float SNAKE_SIZE = 20.f;
-	const unsigned int INITIAL_SNAKE_SIZE = 3;
-	const unsigned int APPLE_SIZE = 20;
-	const unsigned int ROCK_SIZE = 15;
-	const float INITIAL_SPEED = 200.f;	// 
-	const float ACCELERATION = 10.f;	// For each eaten apple snake speed will be increased by this value
-	const int MIN_APPLES = 40;
-	const int MAX_APPLES = 80;
+	const float PLATFORM_SIZE = 50.f;
+	const float BALL_SIZE = 30.f;
+	const unsigned int TILE_SIZE = 20;
+	const float INITIAL_PLATFORM_SPEED = 500.f;
+	const float INITIAL_BALL_SPEED = 300.f;
 	const unsigned int SCREEN_WIDTH = 800;
 	const unsigned int SCREEN_HEGHT = 600;
 	const float TIME_PER_FRAME = 1.f / 60.f; // 60 fps
-	const unsigned int ROCKS_COUNT = 0;
+	const int POINTS_PER_TILE = 100;
+	const int MAX_TILES = 20;
 
 	const int MAX_RECORDS_TABLE_SIZE = 5;
 	extern const char* PLAYER_NAME; // We need to define this constant in some SPP

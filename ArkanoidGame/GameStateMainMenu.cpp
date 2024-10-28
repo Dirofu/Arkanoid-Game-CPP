@@ -10,7 +10,7 @@ namespace ArkanoidGame
 		MenuItem& rootItem = menu.GetRootItem();
 		assert(font.loadFromFile(RESOURCES_PATH + "Fonts/Roboto-Regular.ttf"));
 
-		rootItem.GetHintText().setString("Snake Game");
+		rootItem.GetHintText().setString(GAME_NAME);
 		rootItem.GetHintText().setFont(font);
 		rootItem.GetHintText().setCharacterSize(48);
 		rootItem.GetHintText().setFillColor(sf::Color::Red);

@@ -37,15 +37,15 @@ namespace ArkanoidGame
 		{
 			MenuItem* parent = selectedItem->GetMenuItemParent();
 			assert(parent);
+			std::vector<MenuItem*> childrens = parent->GetMenuItemChildrens();
+			auto it = std::find(childrens.begin(), childrens.end(), selectedItem);
 
-			auto it = std::find(parent->GetMenuItemChildrens().begin(), parent->GetMenuItemChildrens().end(), selectedItem);
-			if (it != parent->GetMenuItemChildrens().begin())
+			if (it != childrens.begin())
 			{
 				SelectMenuItem(*(--it));
 				return true;
 			}
 		}
-
 		return false;
 	}
 
@@ -55,8 +55,10 @@ namespace ArkanoidGame
 		{
 			MenuItem* parent = selectedItem->GetMenuItemParent();
 			assert(parent); // There always should be parent
-			auto it = std::find(parent->GetMenuItemChildrens().begin(), parent->GetMenuItemChildrens().end(), selectedItem);
-			if (it != parent->GetMenuItemChildrens().end() - 1)
+			std::vector<MenuItem*> childrens = parent->GetMenuItemChildrens();
+			auto it = std::find(childrens.begin(), childrens.end(), selectedItem);
+
+			if (it != childrens.end() - 1)
 			{
 				SelectMenuItem(*(++it));
 				return true;
@@ -104,11 +106,6 @@ namespace ArkanoidGame
 			{
 				texts.push_back(&child->GetText());
 			}
-		}
-
-		for (auto it = texts.begin(); it != texts.end(); ++it)
-		{
-			sf::FloatRect itemRect = (*it)->getGlobalBounds();
 		}
 
 		DrawTextList(
